@@ -1,4 +1,10 @@
-const input = document.querySelector('#name-input');
+const refs = {
+  input: document.querySelector('#name-input'),
+  nameSpan: document.querySelector('#name-output'),
+};
 
-const nameSpan = document.querySelector('#name-output');
-console.log(nameSpan);
+refs.input.addEventListener('input', onInputText);
+
+function onInputText(event) {
+  refs.nameSpan.textContent = event.currentTarget.value;
+}
