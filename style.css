@@ -1,3 +1,27 @@
+.title {
+  display: flex;
+  justify-content: center;
+  color: #f5600a;
+  text-shadow: rgb(7, 41, 5) 2px 0 2px;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+#gallery li img {
+  display: flex;
+  max-width: 75%;
+  width: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10%;
+}
+
 #validation-input {
   border: 3px solid #bdbdbd;
 }
