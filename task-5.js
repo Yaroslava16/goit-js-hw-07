@@ -1,10 +1,12 @@
-const refs = {
-  input: document.querySelector('#name-input'),
-  nameSpan: document.querySelector('#name-output'),
-};
+let input = document.getElementById('name-input');
+let nameSpan = document.getElementById('name-output');
 
-refs.input.addEventListener('input', onInputText);
+input.addEventListener('input', onInputText);
 
 function onInputText(event) {
-  refs.nameSpan.textContent = event.currentTarget.value;
+  if (input.value === '') {
+    nameSpan.innerHTML = 'незнакомец';
+  } else {
+    nameSpan.innerHTML = input.value;
+  }
 }
